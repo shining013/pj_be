@@ -6,12 +6,13 @@ spring:
 
   datasource:
     driver-class-name : com.mysql.cj.jdbc.Driver
-    url : ${DB_URL}
-    username : ${DB_USERNAME}
-    password : ${DB_PASSWORD}
+    url : jdbc:mysql://43.200.120.76:3306/pj?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username : admin
+    password : yj0113
 
   jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     properties:
       hibernate:
         ddl-auto: none
-        dialect: org.hibernate.dialect.MYSQL8Dialect
+
